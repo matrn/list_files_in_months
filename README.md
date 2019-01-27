@@ -7,7 +7,7 @@ This AWK script can list files in directory and print number of files in single 
 
 Script uses `ls` to list files in directory and `stat` to get unix time of modification (creation if your system supports it) and size in bytes. Then script will save all this info and in the end pretty print this to the terminal.
 
-## Getting started
+## Usage
 
 After downloading this repository give executable permission to awk script:  
 	`chmod +x list_files_in_months.awk`
