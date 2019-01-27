@@ -1,7 +1,7 @@
 List files in directory and print months statistics with total size in bytes
 ==========
 
-This AWK script can list files in directory and print number of files in single months with total size in bytes. using system command `ls` and ge
+This AWK script can list files in directory and print number of files in single months with total size in bytes.
 
 ## About
 
