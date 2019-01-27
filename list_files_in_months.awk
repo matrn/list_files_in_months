@@ -2,7 +2,14 @@
 
 
 BEGIN {
-	dir = "/home/matej/"   #chnage to your home directory
+	dir = "/home/matej"   #chnage to your home directory
+
+	if(ARGC == 2){   #check for command line arguments
+		dir = ARGV[1]
+	}
+	printf("Listing directory: %s\n", dir)
+
+
 	cmd = "ls " dir
 
 	months[12]
@@ -23,7 +30,7 @@ BEGIN {
 
 
 	while((cmd | getline filename) > 0 ){
-		"stat --printf=\"%Y %s\" \"" dir filename "\"" | getline info   #use %W instead of %Y if your system supports date of birth
+		"stat --printf=\"%Y %s\" \"" dir "/" filename "\"" | getline info   #use %W instead of %Y if your system supports date of birth
 		#FS = " "
 		split(info, arr, " ")
 		time = arr[1]
@@ -39,7 +46,7 @@ BEGIN {
 	close(cmd)
 
 	#pretty print
-	printf("%-11s %-20.18s %s\n", "month", "number of files", "total size of files")
+	printf("%-11s %-20.18s %s\n", "Month", "Number of files", "Total size of files (in bytes)")
 	for(a = 1; a <= 12; a ++){
 		printf("%-9s:   %-20s %s\n", m_names[a], months[a], sizes[a])
 	}

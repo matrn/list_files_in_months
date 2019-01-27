@@ -13,18 +13,21 @@ After downloading this repository give executable permission to awk script:
  `chmod +x list_files_in_months.awk`
 
 Then you can run it with:
- `list_files_in_months.awk`
+ `./list_files_in_months.awk`
+or
+ `./list_files_in_months.awk /my/directory`
 
-## Changing directory time type
+## Changing the default directory time type
 
- - Change directory in line `dir = "/home/matej/"` to your own.
+ - Change the default directory in line `dir = "/home/matej/"` to your own.
  - If your system supports time of birth use %W instead of %Y in line `"stat --printf=\"%Y %s\" \"" dir filename "\"" | getline info`
 
 ## Example of usage
 
 ```
-$ ./list_files_in_months.awk 
-month       number of files      total size of files
+$ ./list_files_in_months.awk /home/matej
+Listing directory: /home/matej
+Month       Number of files      Total size of files (in bytes)
 January  :   7                    163860
 February :   1                    4096
 March    :   1                    4096
