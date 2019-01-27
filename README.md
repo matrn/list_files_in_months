@@ -19,3 +19,22 @@ Then you can run it with:
 
  - Change directory in line `dir = "/home/matej/"` to your own.
  - If your system supports time of birth use %W instead of %Y in line `"stat --printf=\"%Y %s\" \"" dir filename "\"" | getline info`
+
+## Example of usage
+
+```
+$ ./list_files_in_months.awk 
+month       number of files      total size of files
+January  :   7                    163860
+February :   1                    4096
+March    :   1                    4096
+April    :   1                    764
+May      :   1                    4096
+June     :   3                    12288
+July     :   2                    13142852623
+August   :   2                    8192
+September:   1                    16
+October  :   8                    10975459334
+November :   4                    44067
+December :   10                   49152
+```
