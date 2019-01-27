@@ -9,13 +9,13 @@ Script uses `ls` to list files in directory and `stat` to get unix time of modif
 
 ## Getting started
 
-After downloading this repository give executable permission to awk script:
- `chmod +x list_files_in_months.awk`
+After downloading this repository give executable permission to awk script:  
+	`chmod +x list_files_in_months.awk`
 
-Then you can run it with:
- `./list_files_in_months.awk`
-or
- `./list_files_in_months.awk /my/directory`
+Then you can run it with:  
+	`./list_files_in_months.awk`  
+ or  
+	`./list_files_in_months.awk /my/directory`
 
 ## Changing the default directory time type
 
