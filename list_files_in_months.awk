@@ -2,7 +2,7 @@
 
 
 BEGIN {
-	dir = "/home/matej"   #chnage to your home directory
+	dir = "/home/matej"   #change default directory
 
 	if(ARGC == 2){   #check for command line arguments
 		dir = ARGV[1]
@@ -11,9 +11,6 @@ BEGIN {
 
 
 	cmd = "ls " dir
-
-	months[12]
-	sizes[12]
 
 	m_names[1] = "January"
 	m_names[2] = "February"
@@ -40,8 +37,6 @@ BEGIN {
 
 		months[month] = months[month] + 1
 		sizes[month] = sizes[month] + size
-
-		#print(month)
 	} 
 	close(cmd)
 
